@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5d4q@ckpzvi!lx^7m_@p-9v^un8_ij79s0fy!@^4^$oa%kancq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['web-lex-do.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['web-lex-do.onrender.com', 'localhost', 'web-lex-do.onrender.com/lex']
 
 
 # Application definition
