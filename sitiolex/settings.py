@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5d4q@ckpzvi!lx^7m_@p-9v^un8_ij79s0fy!@^4^$oa%kancq'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['hammerhead-app-4mrsj.ondigitalocean.app']
+ALLOWED_HOSTS = ['lex.onrender.com', 'localhost']
 
 
 # Application definition
@@ -85,10 +85,15 @@ WSGI_APPLICATION = 'sitiolex.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgrelex',
+        'USER': 'user_lex',
+        'PASSWORD': 'OddzbrD1QMt7lgCx8h1gy8mD1pLS4SuB',
+        'HOST': 'dpg-ct6f8tdumphs7396n030-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
