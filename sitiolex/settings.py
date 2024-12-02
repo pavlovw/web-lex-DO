@@ -28,6 +28,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['web-lex-do.onrender.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://web-lex-do.onrender.com']
+
+
 
 # Application definition
 
