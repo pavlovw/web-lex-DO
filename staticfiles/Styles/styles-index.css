@@ -33,8 +33,9 @@
 }
 
 .nosotros-container img {
-    margin-right: 20px;
-    max-width: 50%;
+    max-width: 50%; /* Ajusta este valor según el tamaño que desees */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-right: 20px; /* Espaciado entre la imagen y el contenido */
 }
 
 .content-nosotros {
