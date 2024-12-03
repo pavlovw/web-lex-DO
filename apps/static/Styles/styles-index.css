@@ -175,7 +175,7 @@
 
 @media (max-width: 468px) {
     .banner {
-        height: 40vh;
+        height: 80vh;
     }
 
     .carousel-caption h5 {
