@@ -30,6 +30,10 @@ ALLOWED_HOSTS = ['web-lex-do.onrender.com', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://web-lex-do.onrender.com']
 
+CORS_ALLOWED_ORIGINS = [
+    "https://tidio.co",  # Agregar la URL del servicio externo
+]
+
 
 
 # Application definition
@@ -49,6 +53,7 @@ INSTALLED_APPS = [
     'apps.nosotros',
     'apps.services',
     'apps.ubicacion',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'sitiolex.urls'
