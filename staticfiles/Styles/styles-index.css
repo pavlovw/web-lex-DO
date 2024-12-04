@@ -33,7 +33,7 @@
 }
 
 .nosotros-container img {
-    max-width: 50%; /* Ajusta este valor según el tamaño que desees */
+    max-width: 20%; /* Ajusta este valor según el tamaño que desees */
     height: auto; /* Mantiene la relación de aspecto */
     margin-right: 20px; /* Espaciado entre la imagen y el contenido */
 }
@@ -177,6 +177,12 @@
 @media (max-width: 468px) {
     .banner {
         height: 80vh;
+    }
+
+    .nosotros-container img {
+    max-width: 50%; /* Ajusta este valor según el tamaño que desees */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-right: 20px; /* Espaciado entre la imagen y el contenido */
     }
 
     .carousel-caption h5 {
