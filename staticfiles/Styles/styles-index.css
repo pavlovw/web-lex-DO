@@ -176,7 +176,7 @@
 
 @media (max-width: 468px) {
     .banner {
-        height: 80vh;
+        height: 100vh;
     }
 
     .nosotros-container img {
