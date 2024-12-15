@@ -1,21 +1,17 @@
+# apps/account/response_time_middleware.py
+
 import time
+from django.utils.deprecation import MiddlewareMixin
 import logging
 
-logger = logging.getLogger(__name__)
+# Configura el logger
+logger = logging.getLogger('django')
 
-class ResponseTimeMiddleware:
-    def __init__(self, get_response):
-        self.get_response = get_response
-
-    def __call__(self, request):
-        start_time = time.time()  # Comienza a medir el tiempo
-        response = self.get_response(request)
-        end_time = time.time()  # Finaliza la medición
-
-        # Calcula el tiempo de respuesta
-        response_time = end_time - start_time
-
-        # Registra el tiempo en los logs
-        logger.info(f"Tiempo de respuesta para {request.path}: {response_time:.4f} segundos")
-
+class ResponseTimeMiddleware(MiddlewareMixin):
+    def process_response(self, request, response):
+        start_time = time.time()
+        response_time = time.time() - start_time
+        # Puedes registrar el tiempo de respuesta
+        logger.info(f"Response time: {response_time:.4f} seconds")
         return response
+
