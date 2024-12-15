@@ -88,7 +88,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'account.response_time_middleware.ResponseTimeMiddleware', 
+    'apps.account.response_time_middleware.ResponseTimeMiddleware', 
 ]
 
 
