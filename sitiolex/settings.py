@@ -28,11 +28,16 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['web-lex-do.onrender.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://web-lex-do.onrender.com']
-
-CORS_ALLOWED_ORIGINS = [
-    "https://tidio.co",  # Agregar la URL del servicio externo
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-lex-do.onrender.com',  # Reemplaza con tu dominio real
 ]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-lex-do.onrender.com', 
+    'http://localhost:8000',  # Si es necesario
+]
+
 
 
 
@@ -95,11 +100,11 @@ WSGI_APPLICATION = 'sitiolex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgrelex',
-        'USER': 'user_lex',
-        'PASSWORD': 'OddzbrD1QMt7lgCx8h1gy8mD1pLS4SuB',
-        'HOST': 'dpg-ct6f8tdumphs7396n030-a.oregon-postgres.render.com',
-        'PORT': '5432',
+        'NAME': 'postgres',
+        'USER': 'postgres.ksaoapqfocacwxpwolgo',
+        'PASSWORD': 'lexDataBase6970',
+        'HOST': 'aws-0-sa-east-1.pooler.supabase.com',
+        'PORT': '6543',
     }
 }
 
