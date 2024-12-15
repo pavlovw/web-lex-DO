@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5d4q@ckpzvi!lx^7m_@p-9v^un8_ij79s0fy!@^4^$oa%kancq'  # Elimina esta línea
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['web-lex-do.onrender.com', 'localhost']
 
