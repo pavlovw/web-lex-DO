@@ -88,8 +88,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    MIDDLEWARE = [
-    'middleware.response_time_middleware.ResponseTimeMiddleware',  # Nombre correcto de la carpeta y archivo
+    'account.response_time_middleware.ResponseTimeMiddleware', 
 ]
 
 ]
