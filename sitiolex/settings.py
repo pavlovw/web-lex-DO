@@ -38,6 +38,23 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',  # Si es necesario
 ]
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'INFO',  # Esto asegura que los logs de nivel INFO se muestren
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
 
 
 
@@ -71,6 +88,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    MIDDLEWARE = [
+    'middleware.response_time_middleware.ResponseTimeMiddleware',  # Nombre correcto de la carpeta y archivo
+]
+
 ]
 
 ROOT_URLCONF = 'sitiolex.urls'
