@@ -91,7 +91,6 @@ MIDDLEWARE = [
     'account.response_time_middleware.ResponseTimeMiddleware', 
 ]
 
-]
 
 ROOT_URLCONF = 'sitiolex.urls'
 
