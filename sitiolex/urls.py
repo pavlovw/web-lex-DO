@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from django_prometheus import exports
+from django_prometheus.views import Metrics
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,7 +13,7 @@ urlpatterns = [
     path('lex/ubicacion/', include('apps.ubicacion.urls')),
     path('api/', include('apps.api.urls')),  # Ruta para tus API
     path('', include('apps.home.urls')), 
-    path('metrics/', exports.ExportToDjango.as_view(), name='prometheus-metrics'),
+    path('metrics/', Metrics.as_view(), name='prometheus-metrics'),
 ]
 
 
