@@ -7,5 +7,5 @@ tzdata==2024.2
 whitenoise==6.8.2
 psycopg2-binary==2.9.10
 django-cors-headers==4.6.0
-django-prometheus==2.1.0  # La versión puede variar
+django-prometheus==2.3.1  # La versión puede variar
 
