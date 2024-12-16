@@ -76,6 +76,7 @@ INSTALLED_APPS = [
     'apps.services',
     'apps.ubicacion',
     'corsheaders',
+    'django_prometheus',
 ]
 
 MIDDLEWARE = [
